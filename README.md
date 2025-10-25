@@ -15,7 +15,8 @@ A full-stack note-taking application built with MongoDB, Express, React, and Nod
 1. Clone the repository
 2. Install dependencies for both frontend and backend:
    ```bash
-   npm run install-deps
+   cd frontend && npm install
+   cd ../backend && npm install
    ```
 3. Set up environment variables in `backend/.env`:
    ```
@@ -27,9 +28,13 @@ A full-stack note-taking application built with MongoDB, Express, React, and Nod
    ```
 4. Run in development mode:
    ```bash
-   npm run dev
+   # Terminal 1: Backend
+   cd backend && npm run dev
+   
+   # Terminal 2: Frontend (in separate window)
+   cd frontend && npm run dev
    ```
-   This will start both frontend (http://localhost:5173) and backend (http://localhost:5001) concurrently.
+   Frontend runs on http://localhost:5173 and backend on http://localhost:5001
 
 ## Production Deployment on Render
 
@@ -39,11 +44,11 @@ A full-stack note-taking application built with MongoDB, Express, React, and Nod
 2. Create a new Web Service on Render
 3. Connect your GitHub repository
 4. Configure the service:
-   - **Build Command**: `cd backend && npm run build`
-   - **Start Command**: `cd backend && npm start`
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
    - **Environment Variables**: Add all variables from your `.env` file
    - **Node Version**: 18 or higher
-   - **Root Directory**: `backend`
+   - **Root Directory**: `.` (root directory)
 
 ### Frontend Build Process
 
