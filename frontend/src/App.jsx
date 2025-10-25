@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
 import HomePage from './pages/HomePage.jsx';
